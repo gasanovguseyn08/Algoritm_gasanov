@@ -1,158 +1,157 @@
 import java.util.Comparator;
-import java.util.List;
 
 public class Arrays {
 
-    // Binary search for byte arrays
-    public static int binarySearch(byte[] a, byte key) {
-        return binarySearch(a, 0, a.length, key);
+    // Бинарный поиск в массиве byte
+    public static int binarySearch(byte[] array, byte key) {
+        return binarySearch(array, 0, array.length, key);
     }
 
-    public static int binarySearch(byte[] a, int fromIndex, int toIndex, byte key) {
-        while (fromIndex < toIndex) {
-            int mid = (fromIndex + toIndex) >>> 1;
-            if (a[mid] < key) {
-                fromIndex = mid + 1;
-            } else if (a[mid] > key) {
-                toIndex = mid;
+    public static int binarySearch(byte[] array, int start, int end, byte key) {
+        while (start < end) {
+            int middle = (start + end) >>> 1;
+            if (array[middle] < key) {
+                start = middle + 1;
+            } else if (array[middle] > key) {
+                end = middle;
             } else {
-                return mid;
+                return middle;
             }
         }
-        return -(fromIndex + 1);
+        return -(start + 1);
     }
 
-    // Binary search for char arrays
-    public static int binarySearch(char[] a, char key) {
-        return binarySearch(a, 0, a.length, key);
+    // Бинарный поиск в массиве char
+    public static int binarySearch(char[] array, char key) {
+        return binarySearch(array, 0, array.length, key);
     }
 
-    public static int binarySearch(char[] a, int fromIndex, int toIndex, char key) {
-        while (fromIndex < toIndex) {
-            int mid = (fromIndex + toIndex) >>> 1;
-            if (a[mid] < key) {
-                fromIndex = mid + 1;
-            } else if (a[mid] > key) {
-                toIndex = mid;
+    public static int binarySearch(char[] array, int start, int end, char key) {
+        while (start < end) {
+            int middle = (start + end) >>> 1;
+            if (array[middle] < key) {
+                start = middle + 1;
+            } else if (array[middle] > key) {
+                end = middle;
             } else {
-                return mid;
+                return middle;
             }
         }
-        return -(fromIndex + 1);
+        return -(start + 1);
     }
 
-    // Binary search for double arrays
-    public static int binarySearch(double[] a, double key) {
-        return binarySearch(a, 0, a.length, key);
+    // Бинарный поиск в массиве double
+    public static int binarySearch(double[] array, double key) {
+        return binarySearch(array, 0, array.length, key);
     }
 
-    public static int binarySearch(double[] a, int fromIndex, int toIndex, double key) {
-        while (fromIndex < toIndex) {
-            int mid = (fromIndex + toIndex) >>> 1;
-            if (a[mid] < key) {
-                fromIndex = mid + 1;
-            } else if (a[mid] > key) {
-                toIndex = mid;
+    public static int binarySearch(double[] array, int start, int end, double key) {
+        while (start < end) {
+            int middle = (start + end) >>> 1;
+            if (array[middle] < key) {
+                start = middle + 1;
+            } else if (array[middle] > key) {
+                end = middle;
             } else {
-                return mid;
+                return middle;
             }
         }
-        return -(fromIndex + 1);
+        return -(start + 1);
     }
 
-    // Binary search for float arrays
-    public static int binarySearch(float[] a, float key) {
-        return binarySearch(a, 0, a.length, key);
+    // Бинарный поиск в массиве float
+    public static int binarySearch(float[] array, float key) {
+        return binarySearch(array, 0, array.length, key);
     }
 
-    public static int binarySearch(float[] a, int fromIndex, int toIndex, float key) {
-        while (fromIndex < toIndex) {
-            int mid = (fromIndex + toIndex) >>> 1;
-            if (a[mid] < key) {
-                fromIndex = mid + 1;
-            } else if (a[mid] > key) {
-                toIndex = mid;
+    public static int binarySearch(float[] array, int start, int end, float key) {
+        while (start < end) {
+            int middle = (start + end) >>> 1;
+            if (array[middle] < key) {
+                start = middle + 1;
+            } else if (array[middle] > key) {
+                end = middle;
             } else {
-                return mid;
+                return middle;
             }
         }
-        return -(fromIndex + 1);
+        return -(start + 1);
     }
 
-    // Binary search for int arrays
-    public static int binarySearch(int[] a, int key) {
-        return binarySearch(a, 0, a.length, key);
+    // Бинарный поиск в массиве int
+    public static int binarySearch(int[] array, int key) {
+        return binarySearch(array, 0, array.length, key);
     }
 
-    public static int binarySearch(int[] a, int fromIndex, int toIndex, int key) {
-        while (fromIndex < toIndex) {
-            int mid = (fromIndex + toIndex) >>> 1;
-            if (a[mid] < key) {
-                fromIndex = mid + 1;
-            } else if (a[mid] > key) {
-                toIndex = mid;
+    public static int binarySearch(int[] array, int start, int end, int key) {
+        while (start < end) {
+            int middle = (start + end) >>> 1;
+            if (array[middle] < key) {
+                start = middle + 1;
+            } else if (array[middle] > key) {
+                end = middle;
             } else {
-                return mid;
+                return middle;
             }
         }
-        return -(fromIndex + 1);
+        return -(start + 1);
     }
 
-    // Binary search for long arrays
-    public static int binarySearch(long[] a, long key) {
-        return binarySearch(a, 0, a.length, key);
+    // Бинарный поиск в массиве long
+    public static int binarySearch(long[] array, long key) {
+        return binarySearch(array, 0, array.length, key);
     }
 
-    public static int binarySearch(long[] a, int fromIndex, int toIndex, long key) {
-        while (fromIndex < toIndex) {
-            int mid = (fromIndex + toIndex) >>> 1;
-            if (a[mid] < key) {
-                fromIndex = mid + 1;
-            } else if (a[mid] > key) {
-                toIndex = mid;
+    public static int binarySearch(long[] array, int start, int end, long key) {
+        while (start < end) {
+            int middle = (start + end) >>> 1;
+            if (array[middle] < key) {
+                start = middle + 1;
+            } else if (array[middle] > key) {
+                end = middle;
             } else {
-                return mid;
+                return middle;
             }
         }
-        return -(fromIndex + 1);
+        return -(start + 1);
     }
 
-    // Binary search for short arrays
-    public static int binarySearch(short[] a, short key) {
-        return binarySearch(a, 0, a.length, key);
+    // Бинарный поиск в массиве short
+    public static int binarySearch(short[] array, short key) {
+        return binarySearch(array, 0, array.length, key);
     }
 
-    public static int binarySearch(short[] a, int fromIndex, int toIndex, short key) {
-        while (fromIndex < toIndex) {
-            int mid = (fromIndex + toIndex) >>> 1;
-            if (a[mid] < key) {
-                fromIndex = mid + 1;
-            } else if (a[mid] > key) {
-                toIndex = mid;
+    public static int binarySearch(short[] array, int start, int end, short key) {
+        while (start < end) {
+            int middle = (start + end) >>> 1;
+            if (array[middle] < key) {
+                start = middle + 1;
+            } else if (array[middle] > key) {
+                end = middle;
             } else {
-                return mid;
+                return middle;
             }
         }
-        return -(fromIndex + 1);
+        return -(start + 1);
     }
 
-    // Binary search for generic arrays with a Comparator
-    public static <T> int binarySearch(T[] a, T key, Comparator<? super T> c) {
-        return binarySearch(a, 0, a.length, key, c);
+    // Бинарный поиск в массиве объектов с компаратором
+    public static <T> int binarySearch(T[] array, T key, Comparator<? super T> comparator) {
+        return binarySearch(array, 0, array.length, key, comparator);
     }
 
-    public static <T> int binarySearch(T[] a, int fromIndex, int toIndex, T key, Comparator<? super T> c) {
-        while (fromIndex < toIndex) {
-            int mid = (fromIndex + toIndex) >>> 1;
-            int cmp = c.compare(a[mid], key);
-            if (cmp < 0) {
-                fromIndex = mid + 1;
-            } else if (cmp > 0) {
-                toIndex = mid;
+    public static <T> int binarySearch(T[] array, int start, int end, T key, Comparator<? super T> comparator) {
+        while (start < end) {
+            int middle = (start + end) >>> 1;
+            int comparison = comparator.compare(array[middle], key);
+            if (comparison < 0) {
+                start = middle + 1;
+            } else if (comparison > 0) {
+                end = middle;
             } else {
-                return mid;
+                return middle;
             }
         }
-        return -(fromIndex + 1);
+        return -(start + 1);
     }
 }
